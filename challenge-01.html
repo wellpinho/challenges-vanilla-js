@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Challenge 01</title>
+
+  <style>
+    #app, form {
+      max-width: 800px;
+      margin: 0 auto;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      color: #444;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    h3{
+      color: #666;
+      font-size: 28px;
+      margin-top: 0;
+      letter-spacing: 7.7px;
+    }
+    .hr {
+      border: .1px solid #ddd;
+      max-width: 200px;
+      margin: 0 auto;
+    }
+
+    form {
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+    fieldset{
+      border: .5px solid #ddd;
+      padding: 1rem;
+      color: #444;
+    }
+    .inputs li{
+      display: grid;
+
+    }
+    .inputs li strong {
+      margin: 3px 0;
+      color: #666;
+    }
+    .inputs li input {
+      border-radius: 2px;
+      border: .5px solid #ddd;
+      padding: 2px 10px;
+      height: 30px;
+    }
+    .btn {
+      background-color: #c3c3c3;
+      padding: .8rem 0;
+      width: 100%;
+      border: none;
+      margin-top: .5rem;
+      color: #444;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="app">
+    <h1>coding challenge 01</h1>
+    <h3>Body Mass Index</h3>
+  </div>
+  <hr class="hr">
+
+  <form action="">
+    <fieldset>
+      <legend>Calculate your body mass</legend>
+      <div class="inputs">
+        <li><strong>Name:</strong> <input type="text" id="name"></li>
+        <li><strong>Height:</strong> <input type="number" id="height" placeholder="exe... 1.74"></li>
+        <li><strong>Weight:</strong> <input type="number" id="weight"></li>
+        <button onclick="firstPerson()" class="btn" type="submit">Calculate...</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <script>
+
+    let names;
+    let BMI, mass, height;
+    const magro = 18.5, normal = 24.9, sobrepeso = 29.9, obeso = 39.9, grave = 40.0;
+
+    const firstPerson = () => {
+      names = document.querySelector('#name').value;
+      mass = document.querySelector('#weight').value;
+      height = document.querySelector('#height').value;
+      height = parseFloat(height);
+      debugger
+      BMI = mass / ( height * height );
+
+      if (BMI <= magro) alert(`Você esta abaixo do peso ${BMI.toFixed(2)}`);
+      else if (BMI > magro && BMI <= normal) alert(`Você esta no peso ideal ${BMI.toFixed(2)}`);
+      else if (BMI > normal && BMI <= sobrepeso) alert(`Você esta com sobrepeso ${BMI.toFixed(2)}`);
+      else if (BMI > sobrepeso && BMI <= obeso) alert(`Você esta com obesidade grau I ${BMI.toFixed(2)}`);
+      else alert(`Você esta com obesidade grave grau II ${BMI.toFixed(2)}`);
+    }
+     
+  </script>
+</body>
+</html>
