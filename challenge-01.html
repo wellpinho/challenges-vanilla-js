@@ -97,8 +97,6 @@
       names = document.querySelector('#name').value;
       mass = document.querySelector('#weight').value;
       height = document.querySelector('#height').value;
-      height = parseFloat(height);
-      debugger
       BMI = mass / ( height * height );
 
       if (BMI <= magro) alert(`Você esta abaixo do peso ${BMI.toFixed(2)}`);
