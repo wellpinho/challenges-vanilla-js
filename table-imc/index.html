@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tabela IMC</title>
+
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+  
+  <div id="app">
+    <h1>Calculo da masssa corporal</h1>
+
+    <div class="exibe">
+      <div class="box-left">
+        <h4>IMC</h4>
+        <p>Abaixo de 18.5</p>
+        <p>Entre 18.5 e 24.9</p>
+        <p>Entre 25 e 29.9</p>
+        <p>Entre 30 e 34.9</p>
+        <p>Entre 35 r 39.9</p>
+        <p>Acima de 40</p>
+      </div>
+      <div class="box-right">
+        <h4>Resultado</h4>
+        <p>Abaixo do peso</p>
+        <p>Peso normal</p>
+        <p>Sobrepeso</p>
+        <p>Obesidade Grau I</p>
+        <p>Obesidade Grau II</p>
+        <p>Obesidade Severa</p>
+      </div>
+    </div>
+    <h2 class="exibeResultaImc"></h2>
+    <form id="form" action="" method="GET">
+      <fieldset>
+        <legend>Didigite seus dados</legend>
+        <div class="input">
+          Peso: <input type="text" class="peso">
+        </div>
+        <div class="input">
+          Altura: <input type="text" class="altura">
+        </div>
+        <button class="btn">Calcular</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

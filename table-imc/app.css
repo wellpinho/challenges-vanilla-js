@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eef9bf;
+}
+
+#app {
+  max-width: 500px;
+  margin: 5rem auto 0;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  box-shadow: 2px 2px 15px #6a8caf;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+h1, h2, h4 {
+  color: #6a8caf;
+  text-align: center;
+}
+
+.exibe {
+  padding-top: 1rem;
+  width: 100%;
+  display: flex;
+}
+
+.box-left {
+  flex-grow: 1;
+}
+
+.box-left h4, .box-right h4 {
+  margin-bottom: .5rem;
+}
+
+.box-left p, .box-right p {
+  text-align: center;
+}
+
+.box-right {
+  flex-grow: 1;
+}
+
+form {
+  margin-top: 2rem;
+}
+
+table {
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  padding: 1rem;
+  display: flex;
+  border: .1px solid #8eb0d3d8;
+}
+
+legend {
+  padding: 0 .8rem;
+  color: #6a8caf;
+}
+
+.input {
+  padding: .3rem;
+  color: #6a8caf;
+}
+
+.btn {
+  padding: .5rem 1rem;
+  border: 0;
+  background-color: #6a8caf;
+  color: #fff;
+  margin-top: .5rem;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #75b79e;
+}
+
+
+input {
+  width: 100%;
+  border: .1px solid #8eb0d3d8;
+  height: 30px;
+}
+
+p, a {
+  color: #75b79e;
+}
+
+.exibeResultaImc {
+  text-align: center;
+  padding: 1.5rem 0 0 0;
+  font-size: 2.5rem;
+}
