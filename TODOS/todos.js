@@ -23,7 +23,6 @@ function protected() {
       todoElement.appendChild(todoText);
       listElement.appendChild(todoElement);
 
-
     }
   }
 
@@ -49,10 +48,6 @@ function protected() {
   function saveToStorage() {
     localStorage.setItem('list_todos', JSON.stringify(todos));
   }
-
-
 }
 
 protected();
-
-
