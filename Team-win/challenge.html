@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code Challenge Section 2</h1>
+    <div class="teams">
+        <h2>John´s team : <span class="john"></span></h2>
+        <h2>Mike´s team : <span class="mark"></span></h2>
+        <h1>Result <span class="win"></span> </h1>
+    </div>
+
+    <script>
+        const funcMedia = () => {
+            const funcJohn = () => {
+            let result = 0
+            const johnText = document.querySelector('.john')
+            const John = [289, 120, 103]
+
+                John.forEach(item => {
+                    result += item / John.length
+                })
+                return johnText.innerHTML = result.toFixed(2)
+            };
+
+            const funcMark = () => {
+                let result = 0
+                const markText = document.querySelector('.mark')
+                const Mark = [116, 94, 123]
+
+                Mark.forEach(item => {
+                    result += item / Mark.length
+                })
+                return markText.innerHTML = result.toFixed(2)
+            };
+
+            const resultWin = document.querySelector('.win')
+            if(funcJohn() > funcMark())
+                resultWin.innerHTML = `John in! ${funcJohn()}`
+            else resultWin.innerHTML = `Mark win! ${funcMark()}`
+        }
+        funcMedia()
+
+        
+        
+        
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
